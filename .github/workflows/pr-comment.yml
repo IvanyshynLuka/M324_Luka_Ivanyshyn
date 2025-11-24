@@ -1,0 +1,18 @@
+name: PR Commenter
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  add-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add automatic PR comment
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            👋 Danke für deinen Pull Request, @${{ github.actor }}!
+            Die CI-Pipeline (Lint, Format, Tests) wurde automatisch gestartet.
