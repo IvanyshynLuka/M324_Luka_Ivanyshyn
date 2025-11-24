@@ -5,11 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npm run format && npm run lint && npm run test && node index.js",
-    "lint": "eslint . --rule \"eqeqeq:error\" --rule \"no-console:error\"",
-    "format": "prettier --write .",
-    "test": "npx mocha ./"
-  },
+  "start": "npm run format && npm run lint && npm run test && node index.js",
+  "lint": "eslint . --rule \"eqeqeq:error\" --rule \"no-console:error\"",
+  "format": "prettier --write .",
+  "format:check": "prettier --check .",
+  "test": "npx mocha ./"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
